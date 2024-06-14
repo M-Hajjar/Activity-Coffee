@@ -1,0 +1,288 @@
+/* Reset default margin and padding */
+html {
+	scroll-behavior: smooth;
+}
+html, body, h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-image: url("flower.png"); /* Set background image */
+  background-color: #f8cb97; /* Set primary background color */
+  color: #000; /* Set text color to black */
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1140px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  background-color: #f0932b; /* Set header background color */
+  padding: 20px 10px;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.menuItem {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+}
+
+.menuItem:hover {
+  background-color: #f8c291; /* Set hover background color */
+}
+
+.home {
+  background: url('welcome2.jpg') center center / cover;
+  padding: 200px 0;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  background-color: #f8c291; /* Set home section background color */
+}
+
+.WelcomeP span, .WelcomeH span {
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add text shadow for better visibility */
+  padding: 10px; /* Padding around the text */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.WelcomeP, .WelcomeH {
+  font-size: 36px;
+  font-weight: 400;
+  text-align: center;
+  color: #fff; /* Set text color to white */
+  display: block; 
+  margin-bottom: 10px; /* Space between the two texts */
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between buttons */
+  margin-top: 20px; /* Space above the buttons */
+}
+
+.MAP, .newButton {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #f0932b; /* Set button background color */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.MAP:hover, .newButton:hover {
+  background-color: #f6b93b; /* Set hover background color */
+}
+
+/* Content section styles */
+/* New styles for form fields in Section 3 */
+
+#contact-form-container {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #f0932b; /* Change border color on focus */
+}
+
+.form-control::placeholder {
+  color: #999; /* Placeholder text color */
+  font-style: italic; /* Placeholder font style */
+}
+
+.form-submit-button {
+  background-color: #f0932b;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-submit-button:hover {
+  background-color: #f6b93b;
+}
+
+
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section {
+  width: 100%;
+  padding: 50px 0; /* Adjust as needed */
+}
+
+section .container {
+  max-width: 1000px;
+}
+
+section .row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.p-5 {
+  padding: 0 20px; /* Adjust as needed */
+}
+
+section .col-lg-6 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+section img {
+  max-width: 100%;
+  height: auto;
+  max-height: 300px; /* Limit the height of the images */
+}
+
+section .display-4 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.section-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  background-color: #f0932b;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.section-button:hover {
+  background-color: #f6b93b;
+}
+
+
+footer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Additional styles for input fields */
+.input-fields {
+  margin-bottom: 20px;
+}
+
+#typeInput, #participantsInput {
+  margin-right: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.BorderRadius {
+  border: 2px solid #000; /* Adjust the border color and thickness as needed */
+  border-radius: 10px; /* Adjust border radius for rounded corners */
+  padding: 20px; /* Add padding inside the border */
+  margin-top: 50px; /* Add space between the border and the content */
+  margin-bottom: 20px; /* Add space between the border and the content */
+}
+
+.main-bg {
+  background-color: #f8cb97; /* Set main background color */
+}
+.footer-centered {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #f8cb97; /* Set footer background color to black */
+  width: 100%; /* Ensure footer spans full width */
+  text-align: center; /* Center align text inside the footer */
+}
+
+.footer-centered .container {
+  max-width: 100%; /* Make container span full width of the footer */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 0 20px; /* Optional padding inside the container */
+}
+
+.footer-centered p {
+  margin: 0;
+  color: #fff; /* Set text color to white */
+}
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  section .row {
+    flex-direction: column; /* Stack columns vertically */
+  }
+
+  section .col-lg-6 {
+    width: 100%; /* Full width columns */
+    text-align: center; /* Center text */
+  }
+
+  section .section-image {
+    order: -1; /* Move images to the top on mobile */
+  }
+  section .image-top {
+    margin-bottom: 20px; /* Add space between the image and text */
+  }
+}
+
+

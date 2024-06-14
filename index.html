@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Find activity ideas and enjoy coffee" />
+    <meta name="author" content="Your Name" />
+    <title>Activity Ideas & Coffee - Find Your Next Adventure</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet" />
+    <link href="public/style.css" rel="stylesheet" />
+</head>
+<body id="page-top">
+    <!-- Navigation-->
+    <div class="header topnav">
+        <div class="container">
+            <a href="#home" class="logo text-primary active">Activity & Coffee</a>
+            <div class="header-right">
+                <a class="menuItem" href="#activities">Activity</a>
+                <a class="menuItem" href="#coffee">Coffee</a>
+            </div>
+        </div>
+    </div>
+    <!-- Header-->
+    <div class="bodycenter content-container">
+        <section class="home" id="home">
+            <p class="WelcomeH"><span>Welcome to Activity & Coffee!</span></p>
+            <h3 class="WelcomeP"><span>Find Your Next Adventure and Enjoy a Cup of Coffee</span></h3>
+            <div class="button-container">
+                <a href="#activities" class="MAP">Find Activity</a>
+                <a href="#coffee" class="newButton">Find Coffee</a>
+            </div>
+        </section>
+
+        <!-- Content section 1-->
+        <div class="content-container" id="activities">
+            <section class="BorderRadius main-bg" id="scroll">
+                <div class="container px-5">
+                    <div class="row gx-5 align-items-center">
+                        <div class="col-lg-6">
+                            <div class="p-5"><img class="img-fluid rounded-circle" src='public/welcome.png' alt="Coffee Image" /></div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="p-5">
+                                <h2 class="display-4">Bored? Find Something Fun to Do!</h2>
+                                <p>Feeling bored and don't know what to do? Use our activity suggestion tool to find fun and engaging activities tailored to your preferences. Choose a type of activity and the number of participants to get started!</p>
+                                <br></br>
+                                <!-- Input fields and button -->
+                                <div class="input-fields" style="margin-bottom: 20px;">
+                                    <select id="typeInput" style="margin-right: 10px; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+                                        <option value="education">Education</option>
+                                        <option value="recreational">Recreational</option>
+                                        <option value="social">Social</option>
+                                        <option value="charity">Charity</option>
+                                        <option value="cooking">Cooking</option>
+                                        <option value="relaxation">Relaxation</option>
+                                        <option value="busywork">Busywork</option>
+                                    </select>
+                                    <input type="number" id="participantsInput" min="1" max="6" placeholder="Enter number of participants" style="margin-right: 10px; padding: 10px; border-radius: 5px; border: 1px solid #ccc;"/>
+                                    <button class="section-button" id="learnMoreButton">Find Activity</button>
+                                </div>
+                                <h2 class="display-4" id="apiData">Your activity will appear here!</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Content section 2-->
+<section class="BorderRadius main-bg " id="coffee">
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center">
+            <div class="col-lg-6 order-lg-1">
+                <div class="p-5">
+                    <h2 class="display-4">Enjoy a Cup of Coffee</h2>
+                    <p>Whether you're planning your next activity or just taking a break, nothing beats a good cup of coffee. Discover new coffee recipes and brewing techniques to make your coffee time more enjoyable.</p>
+                    <br></br>
+                    <button class="section-button image-top" id="getCoffeeImageButton">Get a Coffee Recipe</button>
+                    <p id="coffeeRecipe"></p>
+                </div>
+            </div>
+            <div class="col-lg-6 order-lg-2">
+                <div class="p-5"><img class="img-fluid rounded-circle" id="coffeeImage" src='https://coffee.alexflipnote.dev/random' alt="Coffee Image" /></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+            <!-- Content section 3-->
+            <section class="BorderRadius main-bg" id="contact">
+                <div class="container px-5">
+                    <div class="row gx-5 align-items-center">
+                        <div class="col-lg-6">
+                            <div class="p-5"><img class="img-fluid rounded-circle" src='public/image.jpg' alt="Enjoy Coffee" /></div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div id="contact-form-container">
+                                <h2 class="display-4">Have an idea, let us know</h2>
+                                <p>We'd love to hear from you! Share your ideas, feedback, or just say hello.</p>
+                                <form id="feedbackForm">
+                                    <div class="form-group">
+                                        <label for="nameInput">Name:</label>
+                                        <input class="form-control" type="text" id="nameInput" placeholder="Gojo Satoru" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="emailInput">Email:</label>
+                                        <input class="form-control" type="email" id="emailInput" placeholder="example@mail.com" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="messageInput">Message:</label>
+                                        <textarea class="form-control" id="messageInput" rows="4" placeholder="Enter your message (max 500 characters)" maxlength="500" required></textarea>
+                                    </div>
+                                    <button type="submit" class="form-submit-button">Send Feedback</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer-->
+            <footer class="footer-centered">
+                <div class="container text-center">
+                    <p class="m-0 text-white">© 2024 Activity & Coffee. All rights reserved.</p>
+                </div>
+            </footer>
+        <script src="style.js"></script>
+    </body>
+</html>
