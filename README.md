@@ -16,7 +16,7 @@ Welcome to the **Activity Ideas & Coffee** project! This web application is desi
 - Bootstrap
 - Font Awesome
 - Google Fonts
-- [Bored API](https://www.boredapi.com/)
+- [Bored API](https://bored-api.appbrewery.com/)
 - [Sample Coffee API](https://sampleapis.com/api-list/coffee)
 
 ## Getting Started
