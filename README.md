@@ -43,5 +43,4 @@ To run this project locally, you need:
 
 3. Open `index.html` in your browser to view the project.
 
-## Project Structure
 
