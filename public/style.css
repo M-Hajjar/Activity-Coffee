@@ -153,8 +153,16 @@ body {
 .form-submit-button:hover {
   background-color: #f6b93b;
 }
-
-
+.form-message {
+display: none;
+margin-top: 10px;
+background-color: #00b506;
+color: #fff;
+border: none;
+padding: 10px 20px;
+font-size: 1rem;
+border-radius: 5px;
+}
 
 .content-container {
   display: flex;

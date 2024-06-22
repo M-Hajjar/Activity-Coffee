@@ -11,6 +11,12 @@
     <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet" />
     <link href="public/style.css" rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function() {
+                emailjs.init("5eXY_-7h8cJLXXhL4"); // API ID
+            })();
+        </script>
 </head>
 <body id="page-top">
     <!-- Navigation-->
@@ -70,25 +76,24 @@
             </section>
 
             <!-- Content section 2-->
-<section class="BorderRadius main-bg " id="coffee">
-    <div class="container px-5">
-        <div class="row gx-5 align-items-center">
-            <div class="col-lg-6 order-lg-1">
-                <div class="p-5">
-                    <h2 class="display-4">Enjoy a Cup of Coffee</h2>
-                    <p>Whether you're planning your next activity or just taking a break, nothing beats a good cup of coffee. Discover new coffee recipes and brewing techniques to make your coffee time more enjoyable.</p>
-                    <br></br>
-                    <button class="section-button image-top" id="getCoffeeImageButton">Get a Coffee Recipe</button>
-                    <p id="coffeeRecipe"></p>
+            <section class="BorderRadius main-bg " id="coffee">
+                <div class="container px-5">
+                    <div class="row gx-5 align-items-center">
+                        <div class="col-lg-6 order-lg-1">
+                            <div class="p-5">
+                                <h2 class="display-4">Enjoy a Cup of Coffee</h2>
+                                <p>Whether you're planning your next activity or just taking a break, nothing beats a good cup of coffee. Discover new coffee recipes and brewing techniques to make your coffee time more enjoyable.</p>
+                                <br></br>
+                                <button class="section-button image-top" id="getCoffeeImageButton">Get a Coffee Recipe</button>
+                                <p id="coffeeRecipe"></p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 order-lg-2">
+                            <div class="p-5"><img class="img-fluid rounded-circle" id="coffeeImage" src='https://coffee.alexflipnote.dev/random' alt="Coffee Image" /></div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-6 order-lg-2">
-                <div class="p-5"><img class="img-fluid rounded-circle" id="coffeeImage" src='https://coffee.alexflipnote.dev/random' alt="Coffee Image" /></div>
-            </div>
-        </div>
-    </div>
-</section>
-
+            </section>
 
             <!-- Content section 3-->
             <section class="BorderRadius main-bg" id="contact">
@@ -116,6 +121,7 @@
                                     </div>
                                     <button type="submit" class="form-submit-button">Send Feedback</button>
                                 </form>
+                                <button id="successMessage" class="form-message">Your message has been sent!</button>
                             </div>
                         </div>
                     </div>
@@ -128,6 +134,8 @@
                     <p class="m-0 text-white">© 2024 Activity & Coffee. All rights reserved.</p>
                 </div>
             </footer>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
         <script src="style.js"></script>
     </body>
 </html>
