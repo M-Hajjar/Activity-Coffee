@@ -22,11 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-
-
-
-
-// coffee  section (section 2)
+// coffee section (section 2)
 document.addEventListener('DOMContentLoaded', function() {
     const getCoffeeImageButton = document.getElementById('getCoffeeImageButton');
     const coffeeImage = document.getElementById('coffeeImage');
@@ -57,29 +53,37 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+// Email feedback section (section 3)
+    document.getElementById("feedbackForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent default form submission behavior
 
-// email feedback section (section 3) 
-document.getElementById("feedbackForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent default form submission behavior
+        // Retrieve form data
+        let name = document.getElementById("nameInput").value;
+        let email = document.getElementById("emailInput").value;
+        let message = document.getElementById("messageInput").value;
 
-    console.log("Form submitted");
+        // Send the email using EmailJS
+        emailjs.send("service_bwfg7zs", "template_6knvsjy", {
+            from_name: name,
+            reply_to: email,
+            message: message
+        })
+        .then(function(response) {
+            console.log('SUCCESS!', response.status, response.text);
 
-    // Retrieve form data
-    let name = document.getElementById("nameInput").value;
-    let email = document.getElementById("emailInput").value;
-    let message = document.getElementById("messageInput").value;
-    
-    console.log("Name:", name);
-    console.log("Email:", email);
-    console.log("Message:", message);
+            // Display success message
+            let successMessage = document.getElementById("successMessage");
+            successMessage.style.display = "block";
 
-    // Create the mailto link (demo purposes only)
-    let mailtoLink = `mailto:programmingwork@gmail.com?subject=Feedback&body=Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
+            // Hide success message after 3 seconds
+            setTimeout(function() {
+                successMessage.style.display = "none";
+            }, 3000);
 
-    // Open the default mail client with the mailto link
-    window.location.href = mailtoLink;
-
-    // Optionally, you can reset the form after submission
-    event.target.reset();
-});
+            // Reset the form after submission
+            document.getElementById("feedbackForm").reset();
+        }, function(error) {
+            console.error('FAILED...', error);
+        });
+    });
 
