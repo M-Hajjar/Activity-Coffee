@@ -50,6 +50,7 @@
                                 <!-- Input fields and button -->
                                 <div class="input-fields" style="margin-bottom: 20px;">
                                     <select id="typeInput" style="margin-right: 10px; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+                                        <option value="random">Random</option>
                                         <option value="education">Education</option>
                                         <option value="recreational">Recreational</option>
                                         <option value="social">Social</option>
@@ -58,7 +59,7 @@
                                         <option value="relaxation">Relaxation</option>
                                         <option value="busywork">Busywork</option>
                                     </select>
-                                    <input type="number" id="participantsInput" min="1" max="6" placeholder="Enter number of participants" style="margin-right: 10px; padding: 10px; border-radius: 5px; border: 1px solid #ccc;"/>
+                                    <input type="number" id="participantsInput" min="1" max="4" placeholder="Number of participants (or random)" style="margin-right: 10px; padding: 10px; border-radius: 5px; border: 1px solid #ccc;"/>
                                     <button class="section-button" id="learnMoreButton">Find Activity</button>
                                 </div>
                                 <h2 class="display-4" id="apiData">Your activity will appear here!</h2>
