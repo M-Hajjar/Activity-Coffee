@@ -13,7 +13,6 @@ Welcome to the **Activity Ideas & Coffee** project! This web application is desi
 - HTML5
 - CSS3
 - JavaScript
-- Bootstrap
 - Font Awesome
 - Google Fonts
 - [Bored API](https://bored-api.appbrewery.com/)
