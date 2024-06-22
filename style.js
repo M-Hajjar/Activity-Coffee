@@ -1,33 +1,26 @@
 // idea generator section (section 1)
 document.addEventListener('DOMContentLoaded', function() {
-    // Set default random values
-    const types = ['education', 'recreational', 'social', 'charity', 'cooking', 'relaxation', 'busywork'];
-    const defaultType = types[Math.floor(Math.random() * types.length)];
-    const defaultParticipants = Math.floor(Math.random() * 6) + 1;
+    document.getElementById('learnMoreButton').addEventListener('click', function() {
+        let type = document.getElementById('typeInput').value;
+        let participants = document.getElementById('participantsInput').value;
 
-    document.getElementById('typeInput').value = defaultType;
-    document.getElementById('participantsInput').value = defaultParticipants;
-});
+        let url = 'https://corsproxy.io/?https://bored-api.appbrewery.com/';
 
-document.getElementById('learnMoreButton').addEventListener('click', function() {
-    const type = document.getElementById('typeInput').value;
-    const participants = document.getElementById('participantsInput').value;
+        if (type === 'random' || participants === '') {
+            url += 'random';
+        } else {
+            url += `filter?type=${type}&participants=${participants}`;
+        }
 
-    const url = `https://corsproxy.io/?https://bored-api.appbrewery.com/filter?type=${type}&participants=${participants}`;
-
-    fetch(url)
-        .then(response => response.json())
-        .then(data => {
-            if (data.length > 0) {
-                const activity = data[0].activity;
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                const activity = Array.isArray(data) ? (data.length > 0 ? data[0].activity : 'No activity found for the given parameters.') : data.activity;
                 document.getElementById('apiData').innerText = activity;
-            } else {
-                document.getElementById('apiData').innerText = 'No activity found for the given parameters.';
-            }
-        })
-        .catch(error => console.error('Error:', error));
+            })
+            .catch(error => console.error('Error:', error));
+    });
 });
-
 
 
 
