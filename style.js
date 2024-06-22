@@ -57,12 +57,10 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById("feedbackForm").addEventListener("submit", function(event) {
         event.preventDefault(); // Prevent default form submission behavior
 
-        // Retrieve form data
         let name = document.getElementById("nameInput").value;
         let email = document.getElementById("emailInput").value;
         let message = document.getElementById("messageInput").value;
-
-        // Send the email using EmailJS
+        // EmailJS
         emailjs.send("service_bwfg7zs", "template_6knvsjy", {
             from_name: name,
             reply_to: email,
@@ -71,16 +69,14 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(function(response) {
             console.log('SUCCESS!', response.status, response.text);
 
-            // Display success message
+            //success message
             let successMessage = document.getElementById("successMessage");
             successMessage.style.display = "block";
-
-            // Hide success message after 3 seconds
             setTimeout(function() {
                 successMessage.style.display = "none";
             }, 3000);
 
-            // Reset the form after submission
+            // Reset
             document.getElementById("feedbackForm").reset();
         }, function(error) {
             console.error('FAILED...', error);
