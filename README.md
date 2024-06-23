@@ -4,9 +4,10 @@ Welcome to the **Activity Ideas & Coffee** project! This web application is desi
 
 ## Features
 
-- **Activity Finder**: Get suggestions for activities based on type and number of participants.
-- **Coffee Recipes**: Discover new coffee recipes and brewing techniques.
-- **Feedback Form**: Share your ideas, feedback, or just say hello.
+- [**Activity Finder (API)**](https://bored-api.appbrewery.com/): Get suggestions for activities based on type and number of participants.
+- [**Coffee Image (API)**](https://coffee.alexflipnote.dev/): The page will generate a different Coffee image each time you Refresh it.
+- [**Coffee Ideas (API)**](https://sampleapis.com/api-list/coffee): Descriptions and ingredients used for the most popular coffee drinks.
+- [**Feedback Form (API)**](https://www.emailjs.com/): Share your ideas, feedback, or just say hello.
 
 ## Technologies Used
 
@@ -16,7 +17,9 @@ Welcome to the **Activity Ideas & Coffee** project! This web application is desi
 - Font Awesome
 - Google Fonts
 - [Bored API](https://bored-api.appbrewery.com/)
+- [Coffee API ](https://coffee.alexflipnote.dev/)
 - [Sample Coffee API](https://sampleapis.com/api-list/coffee)
+- [EmailJS](https://www.emailjs.com/)
 
 ## Getting Started
 
