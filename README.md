@@ -1,6 +1,8 @@
 # [Activity & Coffee](https://activityandcoffee.netlify.app/)
 
-Welcome to the **Activity Ideas & Coffee** project! This web application is designed to help you find fun activities and enjoy coffee while planning your next adventure.
+Welcome to the **Activity Ideas & Coffee** project!
+This web application is designed to help you find fun activities 
+and enjoy coffee while planning your next adventure.
 
 ## Features
 
