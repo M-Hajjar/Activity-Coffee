@@ -11,17 +11,6 @@ and enjoy coffee while planning your next adventure.
 - [**Coffee Ideas (API)**](https://sampleapis.com/api-list/coffee): Descriptions and ingredients used for the most popular coffee drinks.
 - [**Feedback Form (API)**](https://www.emailjs.com/): Share your ideas, feedback, or just say hello.
 
-## Technologies Used
-
-- HTML5
-- CSS3
-- JavaScript
-- Font Awesome
-- Google Fonts
-- [Bored API](https://bored-api.appbrewery.com/)
-- [Coffee API ](https://coffee.alexflipnote.dev/)
-- [Sample Coffee API](https://sampleapis.com/api-list/coffee)
-- [EmailJS](https://www.emailjs.com/)
 
 ## Getting Started
 
