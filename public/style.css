@@ -1,10 +1,11 @@
 /* Reset default margin and padding */
 html {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 html, body, h1, h2, h3, p {
   margin: 0;
   padding: 0;
+  overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 body {
@@ -12,7 +13,6 @@ body {
   background-image: url("flower.png"); /* Set background image */
   background-color: #f8cb97; /* Set primary background color */
   color: #000; /* Set text color to black */
-  overflow-x: hidden;
 }
 
 .container {
@@ -20,6 +20,7 @@ body {
   max-width: 1140px;
   margin-right: auto;
   margin-left: auto;
+  padding: 0 15px; /* Ensure no overflow */
 }
 
 .header {
@@ -34,6 +35,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0; /* Ensure no overflow */
 }
 
 .logo {
@@ -154,14 +156,14 @@ body {
   background-color: #f6b93b;
 }
 .form-message {
-display: none;
-margin-top: 10px;
-background-color: #00b506;
-color: #fff;
-border: none;
-padding: 10px 20px;
-font-size: 1rem;
-border-radius: 5px;
+  display: none;
+  margin-top: 10px;
+  background-color: #00b506;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
 }
 
 .content-container {
@@ -274,23 +276,27 @@ footer p {
   margin: 0;
   color: #fff; /* Set text color to white */
 }
+
 /* Media queries for responsive design */
 @media (max-width: 768px) {
+  .container {
+      width: 100%;
+      padding: 0; /* Ensure no overflow on small screens */
+  }
+
   section .row {
-    flex-direction: column; /* Stack columns vertically */
+      flex-direction: column; /* Stack columns vertically */
   }
 
   section .col-lg-6 {
-    width: 100%; /* Full width columns */
-    text-align: center; /* Center text */
+      width: 100%; /* Full width columns */
+      text-align: center; /* Center text */
   }
 
   section .section-image {
-    order: -1; /* Move images to the top on mobile */
+      order: -1; /* Move images to the top on mobile */
   }
   section .image-top {
-    margin-bottom: 20px; /* Add space between the image and text */
+      margin-bottom: 20px; /* Add space between the image and text */
   }
 }
-
-
